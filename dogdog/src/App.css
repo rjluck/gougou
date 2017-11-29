@@ -1,0 +1,113 @@
+
+*{
+  padding:0;
+  margin:0;
+}
+ul,li{
+  list-style: none;
+}
+.App-header{
+  position: fixed;
+  top:0;
+  width:100%;
+  z-index: 100;
+}
+.App-header .one-header{
+  height:60px;
+  background: pink;
+  padding:10px 5%;
+  line-height: 40px;
+
+}
+.App-header .one-header div{
+  display: inline-block;
+  background: #e9e9e9;
+  height:25px;
+  line-height: 25px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.App-header .one-header div input{
+  border:none;
+  outline:none;
+  height:23px;
+  line-height: 23px;
+  border-radius:5px;
+  background: #e9e9e9;
+}
+.App-header .one-header span:first-child {  
+  display: inline-block;
+  margin-right:2%;
+}
+
+.App-header .one-header span:first-child a {
+  border-right: 1px solid #ccc;
+  padding: 0 5px; 
+}
+.App-header .one-header span:last-child .xiaoxi{
+  font-size: 30px;
+  display: inline-block;
+  height:5px;
+}
+
+.App-header .two-header {
+  height:36px;
+  line-height: 36px;
+  background: yellow;
+  width:100%;
+  overflow: auto;
+}
+.App-header .two-header div {
+  width:200%;
+}
+
+.App-header .two-header div p{
+  float:left;
+  margin-right: 3%;
+}
+
+.App-footer {
+  height:50px;
+  position: fixed;
+  width:100%;
+  bottom: 0;
+  background: #fff;
+ 
+}
+.App-footer ul{
+  height:50px;
+  line-height: 40px;
+  display: flex;
+}
+.App-footer ul li{
+  height:50px;
+  line-height: 50px;
+  text-align: center;
+  flex:1;
+}
+.App-footer ul li div{
+  height:30px;
+  line-height: 30px;
+
+}
+.App-footer ul li div .aa{
+  font-size: 26px;
+}
+.App-footer ul li p{
+  height:20px;
+  line-height: 20px;
+  
+  font-size: 16px;
+}
+
+
+.empty {
+  text-decoration: none;
+  color:#666;
+}
+.active {
+  text-decoration: none;
+  color:red;
+}

@@ -1,0 +1,54 @@
+
+.detail_two {
+	height:570px;
+}
+.detail_two h6{
+	margin-top: 30px;
+	margin-bottom: 10px;
+	padding-right: 10%;
+}
+
+.ul_one {
+	height:254px;
+
+}
+.ul_one li {
+	width:33%;
+	height:127px;
+	float:left;
+}
+.ul_one li div {
+	height:86px;
+	width:100%;
+}
+.ul_one li div img{
+	height:86px;
+	width:100%;
+}
+.ul_one li p {
+	height:41px;
+	line-height: 41px;
+	text-align: center;
+	font-size: 12px;
+	color:#000;
+}
+
+.ul_two li{
+	width:50%;
+	height:97px;
+	float:left;
+	text-align: center;
+}
+.ul_two li {
+	margin-bottom: 10px;
+}
+.ul_two li img{
+	height:67px;
+	width:60%;
+}
+.ul_two li p {
+	text-align: center;
+	height:30px;
+	line-height: 30px;
+	font-size: 12px;
+}

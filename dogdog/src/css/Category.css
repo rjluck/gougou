@@ -1,0 +1,33 @@
+
+.category{
+	height:600px;
+}
+.category .category-header {
+	height:40px;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+}
+.category .category-header ul{
+	height:40px;
+	line-height: 40px;
+	display: flex;
+}
+.category .category-header ul li {
+	flex: 1;
+	height:40px;
+	line-height: 40px;
+	text-align: right;
+	color: #fff;
+}
+.category .category-header ul li i{
+	margin-left: 50%;
+	margin-right: 5%
+}
+.empty{
+	color:#000;
+	text-decoration: none;
+}
+.active {
+  text-decoration: none;
+  color:red;
+}

@@ -1,0 +1,33 @@
+
+
+.categorymain .category-aside {
+	width:20%;
+	height:570px;
+	background:#f3f4f5;
+	overflow: auto;
+	float:left;
+}
+.categorymain .category-aside li {
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 1px solid #f3f4f5;
+	font-size: 14px;
+	color:red;
+}
+.categorymain .category-content {
+	height:570px;
+	width:80%;
+	float:left;
+	overflow: auto;
+}
+
+.empty {
+  text-decoration: none;
+  color:#000;
+}
+.active {
+  text-decoration: none;
+  color:red;
+}
+
