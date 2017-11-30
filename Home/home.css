@@ -20,6 +20,7 @@ img{
 .surprise .title{
   width:100%;
   height:40px;
+  background:#f5f5f5;
   line-height:40px;
   box-sizing:border-box;
   padding:0 5px; 
@@ -104,7 +105,7 @@ img{
   border-bottom:1px solid #ccc;
 }
 .fire .img{
-  height:188px;
+  height:200px;
   background:#ddd;
 }
 .fire .img .limg{
@@ -116,62 +117,17 @@ img{
   height:92px;
   width:58%;
 }
-.video{
-  width:100%;
-  height:328px;
-}
-.video .title{
-  width:45%;
-  margin:0 auto;
-}
-.video .mp4{
-  width:100%;
-}
-.video .mp4 a{
-  display:block;
-  height:210px;
-  margin-bottom:20px;
-}
-.video .mp4 p{
-  text-align:center;
-  color:#333;
-}
-.video .mp4 img{
-  width:12px;
-  float:left;
-}
-.video .mp4 a img{
-  width:100%;
-}
-.video .mp4 p:nth-of-type(2){
-  width:24%;
-  height:14px;
-  margin:0 auto;
-  color:#999;
-  line-height:14px;
-}
-.video .mp4 p:nth-of-type(2) img{
-  margin-top:2px;
-}
-.video .mp4 span:nth-of-type(1){
-  float:left;
-  padding-right:8px;
-  border-right:1px solid #999;
-}
-.video .mp4 span:nth-of-type(2){
-  float:right;
-}
 .e_word{
-  height:680px;
+  height:700px;
 }
 .e_word .title{
-  height:42px;
-  line-height:42px;
+  height:40px;
+  line-height:40px;
   position:relative;
 }
 .e_word .title img{
-  width:42%;
-  height:48px;
+  width:40%;
+  height:40px;
   margin-left:105px;
 }
 .e_word .title span{
@@ -181,7 +137,6 @@ img{
   line-height:36px;
   position:absolute;
   right:10px;
-  top:6px;
 }
 .e_word ul{
   width:100%;
@@ -242,11 +197,6 @@ img{
   line-height:26px;
   font-size:14px;
   color:#999;
-}
-.line{
-  width:100%;
-  height:12px;
-  background:#f5f5f5;
 }
 
 

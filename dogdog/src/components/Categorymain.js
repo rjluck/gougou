@@ -40,7 +40,7 @@ class Categorymain extends React.Component {
 		return(
 				<Router>
 					<div className="categorymain">	
-						<ul className="category-aside">
+						<ul className="category-aside" id="leftList">
 							{
 								console.log(this.state.list)
 				                 // this.state.list.map(function(item,index){

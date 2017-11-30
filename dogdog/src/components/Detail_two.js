@@ -1,8 +1,16 @@
-
-
 import React from 'react';
 import axios from 'axios';
 import '../css/Detail_two.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  NavLink,
+  Switch,
+  Redirect
+} from 'react-router-dom';
+import Goods from './goods.js';
+
 class Detail_two extends React.Component {
 	constructor(){
 		super();
@@ -12,6 +20,10 @@ class Detail_two extends React.Component {
 			list2_title_two:[],
 			list2_img_two:[],
 		}
+		this.hid = this.hid.bind(this);
+	}
+	hid(){
+		document.getElementById("leftList").style.display = "none";
 	}
 	componentDidMount(){
 		var that = this;
@@ -28,37 +40,51 @@ class Detail_two extends React.Component {
 	}
 	render(){
 		return(
-				<div className="detail_two">
-					<h6>{this.state.list2_title_one}</h6>
-					<ul className="ul_one">
-						{
-							this.state.list2_img_one.map((item,index)=>{
-								return(
-									<li key={item.name}>
-										<div><img src={item.photo}/></div>
-										<p>{item.name}</p>
-									</li>
+			<Router>
+					<div className="detail_two">
+						<h6>{this.state.list2_title_one}</h6>
+						<ul className="ul_one">
+							{
+								this.state.list2_img_one.map((item,index)=>{
+									return(
+										<li key={item.name}>
+											<Link onClick={this.hid} activeClassName="active" to="/goods">
+												<div>
+													<img src={item.photo}/>
+												</div>
+												<p>{item.name}</p>
+											</Link>
+										</li>
 
-								)
-							})
-						}
-					</ul>	
-					<h6>{this.state.list2_title_two}</h6>
-					<ul className="ul_two">
-						{
-							this.state.list2_img_two.map((item,index)=>{
-								return(
-									<li key={item.name}>
-										<div><img src={item.logo}/></div>
-										<p>{item.name}</p>
-									</li>
-								)
-							})
-						}
-					</ul>
-				</div>	
+									)
+								})
+							}
 
-			)
+						</ul>	                            
+						<h6>{this.state.list2_title_two}</h6>
+						<ul className="ul_two">
+							{
+								this.state.list2_img_two.map((item,index)=>{
+									return(
+										<li key={item.name}>
+											<NavLink onClick={this.hid} activeClassName="active" to="/goods">
+												<div>
+													<img src={item.logo}/>
+												</div>
+												<p>{item.name}</p>
+											</NavLink>
+										</li>
+									)
+								})
+							}
+						</ul>
+			      <Switch>
+			        <Route path="/goods" component={Goods}/>
+			      </Switch>
+					</div>	
+
+			</Router>
+		)
 	}
 }
 

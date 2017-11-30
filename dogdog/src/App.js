@@ -14,17 +14,7 @@ import Main from './components/Main';
 import Category from './components/Category';
 import Cart from './components/Cart';
 import User from './components/Login';
-
-
-
-
-
-
-
-
-
-
-
+import Goods from './components/goods';
 
 // ==========================================
 class App extends Component {
@@ -106,13 +96,42 @@ class App extends Component {
                     <Route exact path="/category" component={Category}/> 
                     <Route path="/cart" component={Cart}/> 
                     <Route exact path="/user" component={User}/> 
+                    <Route exact path="/goods" component={Goods}/> 
             </Switch>                    
             <footer className="App-footer">
                 <ul>
-                  <li><NavLink activeClassName="active" className="empty" to="/main"><div><i className="iconfont icon-fangzi aa"></i></div><p>首页</p></NavLink></li>
-                  <li><NavLink activeClassName="active" className="empty" to="/category"><div><i className="iconfont icon-gengduo aa"></i></div><p>分类</p></NavLink></li>
-                  <li><NavLink activeClassName="active" className="empty" to="/cart"><div><i className="iconfont icon-lvxingche aa"></i></div><p>购物车</p></NavLink></li>
-                  <li><NavLink activeClassName="active" className="empty" to="/user"><div><i className="iconfont icon-qq aa"></i></div><p>我的E宠</p></NavLink></li>     
+                  <li>
+                    <NavLink activeClassName="active" className="empty" to="/main">
+                      <div>
+                        <i className="iconfont">&#xe700;</i>
+                      </div>
+                      <p>首页</p>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink activeClassName="active" className="empty" to="/category">
+                      <div>
+                        <i className="iconfont">&#xe606;</i>
+                      </div>
+                      <p>分类</p>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink activeClassName="active" className="empty" to="/cart">
+                      <div>
+                        <i className="iconfont">&#xe64a;</i>
+                      </div>
+                      <p>购物车</p>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink activeClassName="active" className="empty" to="/user">
+                      <div>
+                        <i className="iconfont">&#xe7bf;</i>
+                      </div>
+                      <p>我的E宠</p>
+                    </NavLink>
+                  </li>     
                 </ul>        
             </footer>
           </div>

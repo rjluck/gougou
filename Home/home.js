@@ -1,27 +1,6 @@
-
-
-// import React from 'react';
-// import '../css/Main.css';
-// import Home from '../Home/home.js';
-// class Login extends React.Component {
-// 	componentDidMount(){
-// 		document.getElementById("App-header").style.display = "block";		
-// 	}
-// 	render(){
-// 		return(
-// 				<div className="yy">
-// 					我是首页
-// 				</div>	
-
-// 			)
-// 	}
-// }
-
-// export default Login;
-
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../Home/home.css';
+import './home.css';
 import {connect} from 'react-redux';
 import { Carousel } from 'antd';
 import 'antd/dist/antd.css';        // 加载 CSS
@@ -29,7 +8,6 @@ import 'antd/dist/antd.css';        // 加载 CSS
 
 class AppUI extends Component {
   componentDidMount(){
-  	document.getElementById("App-header").style.display = "block";		
     this.props.getData();
     this.props.getSurprise();
   }
@@ -58,7 +36,7 @@ class AppUI extends Component {
             })
           }
         </ul> 
-        <div className="line"></div>
+
         <div className="surprise">
           <div className="title">
             <div className="left">
@@ -89,7 +67,7 @@ class AppUI extends Component {
             </ul>
           </div>
         </div>
-        <div className="line"></div>
+
         <div className="fire">
           <div className="title">
             <img alt="" key={props.fire_title.image} src={props.fire_title.image}/>
@@ -105,24 +83,19 @@ class AppUI extends Component {
               }
           </div> 
         </div>
-        <div className="line"></div>
+
         <div className="video">
           <div className="title">
-            <img alt="" id="v_t" key={props.video_title} src={props.video_title}/>
+            <img alt="" key={props.video_title} src={props.video_title}/>
           </div>
           <div className="mp4">
-            <a href={props.video_info.url}>
-              <img alt="" key={props.video_info.image} src={props.video_info.image} />
-            </a>
-            <p>{props.video_info.title}</p>
-            <p>
-              <img src={props.video_watch}/>
+              <img alt="" key={props.video_img} src={props.video_img} />
+              <p>{props.video_word}</p>
               <span>{props.video.visit}</span>
               <span>{props.video.time}</span>
-            </p>
           </div> 
         </div>
-        <div className="line"></div>
+
         <div className="e_word">
           <div className="title">
             <img alt="" key={props.e_word.image} src={props.e_word.image}/>
@@ -194,8 +167,8 @@ const mapStateToProps = (state)=>{
     fire_simg:state.fire_simg,
 
     video_title:state.video_title,
-    video_info:state.video_info,
-    video_watch:state.video_watch,
+    video_img:state.video_img,
+    video_word:state.video_word,
     video:state.video,
 
     e_word:state.e_word,
@@ -216,8 +189,8 @@ const mapDispatchProps = (dispatch)=>{
         var fire_limg = res.data.datas[4].content_images[0][0];
         var fire_simg = res.data.datas[4].content_images[1];
         var video_title = res.data.datas[6].value.center.img.image;
-        var video_info = res.data.datas[7].value[0].share_target.param;
-        var video_watch = res.data.datas[7].value[0].visit_img.image;
+        var video_img = res.data.datas[7].value[0].cover.image;
+        var video_word = res.data.datas[7].value[0].title;
         var video = res.data.datas[7].value[0];
         // var fire_simg = res.data.datas[9];
         // var fire_simg = res.data.datas[10];
@@ -226,8 +199,8 @@ const mapDispatchProps = (dispatch)=>{
         var user = res.data.datas[56].list;
         console.log("aaaa");
         console.log(video_title);
-        console.log(video_info);
-        console.log( video_watch);
+        console.log(video_img);
+        console.log( video_word);
         console.log("aaaa");
         dispatch({
           type:"GET_DATA",
@@ -266,12 +239,12 @@ const mapDispatchProps = (dispatch)=>{
           payload:video_title
         });
         dispatch({
-          type:"GET_INFO",
-          payload:video_info
+          type:"GET_VIDEO_IMG",
+          payload:video_img
         })
         dispatch({
-          type:"GET_WATCH",
-          payload:video_watch
+          type:"GET_VIDEO_WORD",
+          payload:video_word
         })
         dispatch({
           type:"GET_VIDEO",

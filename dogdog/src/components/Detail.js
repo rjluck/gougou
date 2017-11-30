@@ -18,7 +18,7 @@ const Detail = (props)=>(
 		我是详情页
 		{props.match.params.fid}
 		</div>
-	)
+)
 
 
 

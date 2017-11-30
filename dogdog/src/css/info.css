@@ -1,0 +1,8 @@
+.info{
+	width:100%;
+	height:616px;
+	background:#fcc;
+	z-index:10086;
+	position:fixed;
+	top:0;
+}

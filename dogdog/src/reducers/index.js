@@ -8,13 +8,14 @@ import fireTitleReducer from './fireTitleReducer';
 import fireLimgReducer from './fireLimgReducer';
 import fireSimgReducer from './fireSimgReducer';
 import videoTitleReducer from './videoTitleReducer';
-import videoImgReducer from './videoImgReducer';
-import videoWordReducer from './videoWordReducer';
+import videoInfoReducer from './videoInfoReducer';
+import videoWatchReducer from './videoWatchReducer';
 import videoReducer from './videoReducer';
 import ewordReducer from './ewordReducer';
 import textReducer from './textReducer';
 import userReducer from './userReducer';
 import listReducer from './listReducer';
+import Goods1Reducer from './Goods1Reducer';
 //combineReducers合并多个reducers
 
 const reducers = combineReducers({
@@ -27,12 +28,13 @@ const reducers = combineReducers({
     fire_limg: fireLimgReducer,
     fire_simg: fireSimgReducer,
     video_title: videoTitleReducer,
-    video_img: videoImgReducer,
-    video_word: videoWordReducer,
+    video_info: videoInfoReducer,
+    video_watch: videoWatchReducer,
     video: videoReducer,
     e_word: ewordReducer,
     text: textReducer,
     user: userReducer,
+    goods1: Goods1Reducer,
     list1_img_one:listReducer
 
 })

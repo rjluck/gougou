@@ -25,6 +25,9 @@
 	height:86px;
 	width:100%;
 }
+.ul_one li a{
+	display:block;
+}
 .ul_one li p {
 	height:41px;
 	line-height: 41px;
