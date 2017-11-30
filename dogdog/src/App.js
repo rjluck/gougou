@@ -16,16 +16,6 @@ import Cart from './components/Cart';
 import User from './components/Login';
 
 
-
-
-
-
-
-
-
-
-
-
 // ==========================================
 class App extends Component {
   constructor(){
@@ -37,7 +27,7 @@ class App extends Component {
   }
 
   changeCategory(){
-    //document.getElementById("App-header").style.display = "none";
+    // document.getElementById("footer").style.display = "none";
   }
 
 
@@ -73,6 +63,7 @@ class App extends Component {
         url:"https://wap.epet.com/main.html?menu_param=140&pet_type=dog&is_single=1&fw=0"
       }
     ]
+    console.log('this.main')
     return (
       
       <div className="App">
@@ -107,7 +98,7 @@ class App extends Component {
                     <Route path="/cart" component={Cart}/> 
                     <Route exact path="/user" component={User}/> 
             </Switch>                    
-            <footer className="App-footer">
+            <footer className="App-footer" id="footer">
                 <ul>
                   <li><NavLink activeClassName="active" className="empty" to="/main"><div><i className="iconfont icon-fangzi aa"></i></div><p>首页</p></NavLink></li>
                   <li><NavLink activeClassName="active" className="empty" to="/category"><div><i className="iconfont icon-gengduo aa"></i></div><p>分类</p></NavLink></li>
@@ -116,10 +107,8 @@ class App extends Component {
                 </ul>        
             </footer>
           </div>
-        </Router>
-                 
-      </div>
-     
+        </Router>               
+      </div>     
     );
   }
 }

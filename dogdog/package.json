@@ -6,6 +6,7 @@
     "antd": "^2.13.10",
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
+    "history": "^4.7.2",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.6",
@@ -27,6 +28,14 @@
       "changeOrigin": true,
       "pathRewrite": {
         "^/v3": "/v3"
+      },
+      "ws": true
+    },
+    "/users": {
+      "target": "http://localhost:8080",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/users": "/users"
       },
       "ws": true
     }

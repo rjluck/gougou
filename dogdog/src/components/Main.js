@@ -1,24 +1,5 @@
 
 
-// import React from 'react';
-// import '../css/Main.css';
-// import Home from '../Home/home.js';
-// class Login extends React.Component {
-// 	componentDidMount(){
-// 		document.getElementById("App-header").style.display = "block";		
-// 	}
-// 	render(){
-// 		return(
-// 				<div className="yy">
-// 					我是首页
-// 				</div>	
-
-// 			)
-// 	}
-// }
-
-// export default Login;
-
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../Home/home.css';
@@ -26,10 +7,11 @@ import {connect} from 'react-redux';
 import { Carousel } from 'antd';
 import 'antd/dist/antd.css';        // 加载 CSS
 
-
+``
 class AppUI extends Component {
   componentDidMount(){
-  	document.getElementById("App-header").style.display = "block";		
+  	document.getElementById("App-header").style.display = "block";
+    document.getElementById("footer").style.display = "block";		
     this.props.getData();
     this.props.getSurprise();
   }
