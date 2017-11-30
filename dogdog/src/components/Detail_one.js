@@ -96,7 +96,6 @@ class Detail_one extends React.Component {
 		})
 	}
 	render(){
-
 		return(
 				<div className="detail_two">
 					<h6>{this.state.list1_title_one}</h6>
@@ -108,7 +107,6 @@ class Detail_one extends React.Component {
 										<div><img src={item.photo}/></div>
 										<p>{item.name}</p>
 									</li>
-
 								)
 							})
 						}

@@ -86,3 +86,10 @@
 	margin:15px auto;
 	background:#2ec975;
 }
+.user .retu{
+	height:30px;
+	line-height: 30px;
+	text-align: left;
+	color: #ccc;
+	font-size: 20px;
+}

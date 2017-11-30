@@ -42,7 +42,7 @@ class Categorymain extends React.Component {
 					<div className="categorymain">	
 						<ul className="category-aside" id="leftList">
 							{
-								console.log(this.state.list)
+								//console.log(this.state.list)
 				                 // this.state.list.map(function(item,index){
 				                 //    return (
 				                 //      <li key={item.cateid} >

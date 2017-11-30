@@ -15,7 +15,6 @@ import Category from './components/Category';
 import Cart from './components/Cart';
 import User from './components/Login';
 import Goods from './components/goods';
-
 // ==========================================
 class App extends Component {
   constructor(){
@@ -27,7 +26,7 @@ class App extends Component {
   }
 
   changeCategory(){
-    //document.getElementById("App-header").style.display = "none";
+    // document.getElementById("footer").style.display = "none";
   }
 
 
@@ -63,6 +62,7 @@ class App extends Component {
         url:"https://wap.epet.com/main.html?menu_param=140&pet_type=dog&is_single=1&fw=0"
       }
     ]
+    console.log('this.main')
     return (
       
       <div className="App">
@@ -98,7 +98,7 @@ class App extends Component {
                     <Route exact path="/user" component={User}/> 
                     <Route exact path="/goods" component={Goods}/> 
             </Switch>                    
-            <footer className="App-footer">
+            <footer className="App-footer" id="footer">
                 <ul>
                   <li>
                     <NavLink activeClassName="active" className="empty" to="/main">
@@ -135,10 +135,8 @@ class App extends Component {
                 </ul>        
             </footer>
           </div>
-        </Router>
-                 
-      </div>
-     
+        </Router>               
+      </div>     
     );
   }
 }
